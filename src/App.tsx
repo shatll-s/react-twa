@@ -1,7 +1,7 @@
 import './App.css';
 import { TonConnectButton } from '@tonconnect/ui-react';
+import { useTonConnect } from './hooks/useTonConnect';
 import { useCounterContract } from './hooks/useCounterContract';
-import {useTonConnect} from "./hooks/useTonConnect.ts";
 
 function App() {
     const { connected } = useTonConnect();
@@ -10,12 +10,11 @@ function App() {
     return (
         <div className='App'>
             <div className='Container'>
-                <TonConnectButton/>
+                <TonConnectButton />
 
                 <div className='Card'>
                     <b>Counter Address</b>
-                    {/*<div className='Hint'>{address?.slice(0, 30) + '...'}</div>*/}
-                    <div className='Hint'>{address}</div>
+                    <div className='Hint'>{address?.slice(0, 30) + '...'}</div>
                 </div>
 
                 <div className='Card'>
